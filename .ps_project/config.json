@@ -1,0 +1,8 @@
+{
+  "project": "generate-image-api",
+  "machineType": "P4000",
+  "container": "tensorflow/tensorflow:1.5.1-gpu",
+  "command": "./start.sh",
+  "workspace": "/Users/phusakulwongtana/Desktop/generate-image-api",
+  "lastJobId": "jsyl7262feeor2"
+}

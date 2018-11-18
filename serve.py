@@ -1,15 +1,16 @@
 import flask
 import numpy as np
-import matplotlib.pyplot as plt
 import tensorflow as tf
 
 from model import Generator
 import pickle
 
 def get_model_api(input_noise):
+    import inspect
+    print(inspect.getargspec(Generator.__init__))
     generator = Generator()
     generator.build((1, 100))
-    generator.load_weights('weights/gen_rmsprob_better.h5')
+    generator.load_weights('weights/64_gen_lrelu_gan_2.h5')
 
     result = generator.predict(input_noise)
     result = result * 0.5 + 0.5
